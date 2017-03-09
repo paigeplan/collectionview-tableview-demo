@@ -1,26 +1,184 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="0ob-yU-4VA">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--my bird collection view-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="BirdCollectionViewController" customModule="CollectionAndTableView" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="JAz-EH-i2H">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.19730768900000001" green="0.86927734369999998" blue="0.49152905940000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="8" minimumInteritemSpacing="8" id="4GV-DB-8R9">
+                                    <size key="itemSize" width="175" height="188"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="8" minY="8" maxX="8" maxY="8"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="birdCell" id="LcN-wi-dKE" customClass="BirdCollectionViewCell" customModule="CollectionAndTableView" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="8" width="175" height="188"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="175" height="188"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Yzz-Eg-pWC">
+                                                    <rect key="frame" x="0.0" y="0.0" width="175" height="151.5"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qoC-P9-oa6">
+                                                    <rect key="frame" x="69.5" y="159.5" width="37" height="20.5"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="15"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottomMargin" secondItem="qoC-P9-oa6" secondAttribute="bottom" id="FXh-Xj-SwV"/>
+                                            <constraint firstItem="Yzz-Eg-pWC" firstAttribute="width" secondItem="LcN-wi-dKE" secondAttribute="width" id="HWn-fV-Jbe"/>
+                                            <constraint firstItem="qoC-P9-oa6" firstAttribute="top" secondItem="Yzz-Eg-pWC" secondAttribute="bottom" constant="8" symbolic="YES" id="TiO-tY-jep"/>
+                                            <constraint firstItem="qoC-P9-oa6" firstAttribute="centerX" secondItem="LcN-wi-dKE" secondAttribute="centerX" id="Tqz-P3-5sz"/>
+                                            <constraint firstItem="Yzz-Eg-pWC" firstAttribute="centerX" secondItem="LcN-wi-dKE" secondAttribute="centerX" id="fbD-18-F8r"/>
+                                            <constraint firstItem="Yzz-Eg-pWC" firstAttribute="top" secondItem="LcN-wi-dKE" secondAttribute="topMargin" constant="-8" id="lDJ-qm-Ir6"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.corner" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="birdImageView" destination="Yzz-Eg-pWC" id="0FG-xg-OsY"/>
+                                            <outlet property="birdNameLabel" destination="qoC-P9-oa6" id="h01-Uo-TzF"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.19730768900000001" green="0.86927734369999998" blue="0.49152905940000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="JAz-EH-i2H" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="5HX-XZ-xXA"/>
+                            <constraint firstItem="JAz-EH-i2H" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="GUb-Dr-UEb"/>
+                            <constraint firstItem="JAz-EH-i2H" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="YfP-uq-q7y"/>
+                            <constraint firstItem="JAz-EH-i2H" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qsb-KE-g0J"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="my bird collection view" id="Qvh-LC-72c"/>
+                    <connections>
+                        <outlet property="birdCollectionView" destination="JAz-EH-i2H" id="Ib5-hp-o2Q"/>
+                        <segue destination="8G3-AF-noT" kind="show" identifier="collectionToTable" id="3U8-Tu-2IV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1076" y="138.98050974512745"/>
+        </scene>
+        <!--my bird table view-->
+        <scene sceneID="SmZ-Vu-Cje">
+            <objects>
+                <viewController title="my bird table view" id="8G3-AF-noT" customClass="BirdTableViewController" customModule="CollectionAndTableView" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="poB-Um-mpw"/>
+                        <viewControllerLayoutGuide type="bottom" id="oj9-aG-lVa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="S1N-KX-NVe">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="85" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="o3f-c7-gfo" customClass="BirdTableViewController">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="birdCell" rowHeight="85" id="Vzy-7P-PDB" customClass="BirdTableViewCell" customModule="CollectionAndTableView" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="85"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Vzy-7P-PDB" id="46R-7O-IL0">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="84.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oXR-XX-pYD">
+                                                    <rect key="frame" x="8" y="8" width="68.5" height="68.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="oXR-XX-pYD" secondAttribute="height" multiplier="1:1" id="wX2-uR-Fqz"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OLD-PO-fVo">
+                                                    <rect key="frame" x="92.5" y="27.5" width="274.5" height="30.5"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="22"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="OLD-PO-fVo" firstAttribute="centerY" secondItem="46R-7O-IL0" secondAttribute="centerY" id="CVj-Da-EH2"/>
+                                                <constraint firstItem="OLD-PO-fVo" firstAttribute="leading" secondItem="oXR-XX-pYD" secondAttribute="trailing" constant="16" id="F4z-9K-etd"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="oXR-XX-pYD" secondAttribute="bottom" id="hUI-m0-Q9Y"/>
+                                                <constraint firstAttribute="leadingMargin" secondItem="oXR-XX-pYD" secondAttribute="leading" id="kEN-fI-mfF"/>
+                                                <constraint firstAttribute="topMargin" secondItem="oXR-XX-pYD" secondAttribute="top" id="nHp-V2-2Y0"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="OLD-PO-fVo" secondAttribute="trailing" id="zXz-J9-8jE"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="birdImageView" destination="oXR-XX-pYD" id="q2P-qw-C2N"/>
+                                            <outlet property="birdNameLabel" destination="OLD-PO-fVo" id="jfs-dv-yiN"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="o3f-c7-gfo" firstAttribute="height" secondItem="S1N-KX-NVe" secondAttribute="height" id="LLq-gO-nmX"/>
+                            <constraint firstItem="o3f-c7-gfo" firstAttribute="width" secondItem="S1N-KX-NVe" secondAttribute="width" id="S14-cQ-cxq"/>
+                            <constraint firstItem="o3f-c7-gfo" firstAttribute="centerX" secondItem="S1N-KX-NVe" secondAttribute="centerX" id="cJl-wS-1ZK"/>
+                            <constraint firstItem="o3f-c7-gfo" firstAttribute="centerY" secondItem="S1N-KX-NVe" secondAttribute="centerY" id="v1h-Kf-TWq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="birdTableView" destination="o3f-c7-gfo" id="RAC-Xs-x2b"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qmc-Ax-Sqa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1821.5999999999999" y="142.57871064467767"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="atn-sk-PiQ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0ob-yU-4VA" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="bBW-r7-hSZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
+                            <color key="textColor" red="0.16030497042048977" green="0.72279296869999998" blue="0.41067247270315382" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="RRV-UW-zCu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qbP-4b-EDO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="205.59999999999999" y="-543.77811094452773"/>
         </scene>
     </scenes>
 </document>

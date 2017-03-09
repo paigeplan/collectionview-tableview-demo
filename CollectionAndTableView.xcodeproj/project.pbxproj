@@ -8,20 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		6CA39B641E71C057008A070F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA39B631E71C057008A070F /* AppDelegate.swift */; };
-		6CA39B661E71C057008A070F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA39B651E71C057008A070F /* ViewController.swift */; };
+		6CA39B661E71C057008A070F /* BirdCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA39B651E71C057008A070F /* BirdCollectionViewController.swift */; };
 		6CA39B691E71C057008A070F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CA39B671E71C057008A070F /* Main.storyboard */; };
 		6CA39B6B1E71C057008A070F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6CA39B6A1E71C057008A070F /* Assets.xcassets */; };
 		6CA39B6E1E71C057008A070F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CA39B6C1E71C057008A070F /* LaunchScreen.storyboard */; };
+		6CA39B761E71C201008A070F /* Bird.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA39B751E71C201008A070F /* Bird.swift */; };
+		6CA39B781E71C356008A070F /* BirdCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA39B771E71C356008A070F /* BirdCollectionViewCell.swift */; };
+		6CCF33381E71DBC000F4FDE5 /* BirdTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCF33371E71DBC000F4FDE5 /* BirdTableViewCell.swift */; };
+		6CCF333C1E71DCC400F4FDE5 /* BirdTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCF333B1E71DCC400F4FDE5 /* BirdTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6CA39B601E71C057008A070F /* CollectionAndTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollectionAndTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CA39B631E71C057008A070F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6CA39B651E71C057008A070F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6CA39B651E71C057008A070F /* BirdCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdCollectionViewController.swift; sourceTree = "<group>"; };
 		6CA39B681E71C057008A070F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6CA39B6A1E71C057008A070F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6CA39B6D1E71C057008A070F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6CA39B6F1E71C057008A070F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6CA39B751E71C201008A070F /* Bird.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bird.swift; sourceTree = "<group>"; };
+		6CA39B771E71C356008A070F /* BirdCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BirdCollectionViewCell.swift; sourceTree = "<group>"; };
+		6CCF33371E71DBC000F4FDE5 /* BirdTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BirdTableViewCell.swift; sourceTree = "<group>"; };
+		6CCF333B1E71DCC400F4FDE5 /* BirdTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BirdTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +46,7 @@
 		6CA39B571E71C056008A070F = {
 			isa = PBXGroup;
 			children = (
+				6CCF333B1E71DCC400F4FDE5 /* BirdTableViewController.swift */,
 				6CA39B621E71C057008A070F /* CollectionAndTableView */,
 				6CA39B611E71C057008A070F /* Products */,
 			);
@@ -55,8 +64,11 @@
 			isa = PBXGroup;
 			children = (
 				6CA39B631E71C057008A070F /* AppDelegate.swift */,
-				6CA39B651E71C057008A070F /* ViewController.swift */,
+				6CA39B651E71C057008A070F /* BirdCollectionViewController.swift */,
 				6CA39B671E71C057008A070F /* Main.storyboard */,
+				6CCF33371E71DBC000F4FDE5 /* BirdTableViewCell.swift */,
+				6CA39B771E71C356008A070F /* BirdCollectionViewCell.swift */,
+				6CA39B751E71C201008A070F /* Bird.swift */,
 				6CA39B6A1E71C057008A070F /* Assets.xcassets */,
 				6CA39B6C1E71C057008A070F /* LaunchScreen.storyboard */,
 				6CA39B6F1E71C057008A070F /* Info.plist */,
@@ -137,7 +149,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6CA39B661E71C057008A070F /* ViewController.swift in Sources */,
+				6CA39B781E71C356008A070F /* BirdCollectionViewCell.swift in Sources */,
+				6CCF33381E71DBC000F4FDE5 /* BirdTableViewCell.swift in Sources */,
+				6CA39B661E71C057008A070F /* BirdCollectionViewController.swift in Sources */,
+				6CA39B761E71C201008A070F /* Bird.swift in Sources */,
+				6CCF333C1E71DCC400F4FDE5 /* BirdTableViewController.swift in Sources */,
 				6CA39B641E71C057008A070F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,6 +318,7 @@
 				6CA39B741E71C057008A070F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
